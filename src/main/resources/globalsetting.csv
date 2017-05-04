@@ -1,0 +1,10 @@
+caseId,phoneMode,deviceName,platformName,browser,ignoreUnimportantViews,server,appPackage,appActivity
+t1,,192.168.220.101:5555,Android,chrome,true,127.0.0.1:4723,com.snailvr.manager,com.whaley.vr.module.launcher.activitys.MainActivity
+t2,Le X620,LE66A06210212345,Android,chrome,true,127.0.0.1:4723,com.snailvr.manager,com.whaley.vr.module.launcher.activitys.StartUpActivity
+t3,vivo,8d5cd6c0,Android,chrome,true,127.0.0.1:4723,com.snailvr.manager,com.whaley.vr.module.launcher.activitys.SplashActivity
+t4,oppo R9--OK,VGYP7T6P99999999,Android,chrome,true,127.0.0.1:4723,com.snailvr.manager,com.whaley.vr.module.launcher.activitys.SplashActivity
+t5,meizu--OK,621QECQB43ZHS,Android,chrome,true,127.0.0.1:4723,com.snailvr.manager,com.whaley.vr.module.launcher.activitys.SplashActivity
+t6,360--OK,6221231716B0904714,Android,chrome,true,127.0.0.1:4723,com.snailvr.manager,com.whaley.vr.module.launcher.activitys.SplashActivity
+t7,HUAWEI Meta9-FAIL,GWY0217115007494,Android,chrome,true,127.0.0.1:4723,com.snailvr.manager,com.whaley.vr.module.launcher.activitys.SplashActivity
+t8,HUAWEI_PE-CL00-PASS,Q8WDU16114001133,Android,chrome,true,127.0.0.1:4723,com.snailvr.manager,com.whaley.vr.module.launcher.activitys.SplashActivity
+t9,MI 5,ea08a98e,Android,chrome,true,127.0.0.1:4723,com.snailvr.manager,com.whaley.vr.module.launcher.activitys.SplashActivity

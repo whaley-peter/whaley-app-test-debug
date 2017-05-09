@@ -60,10 +60,6 @@ public class TestSuit {
 //	  capabilities.setCapability("noRest", "true");
 	  capabilities.setCapability("appPackage", tdp.getTestData("appPackage",t));
 	  capabilities.setCapability("appActivity", tdp.getTestData("appActivity", t));
-//	  capabilities.setCapability("appWaitPackage", tdp.getTestData("appPackage",t));
-//	  capabilities.setCapability("appWaitActivity", tdp.getTestData("appActivity",t));
-//	  capabilities.setCapability("appWaitActivity", "com.whaley.vr.module.launcher.activitys.MainActivity");
-//	  capabilities.setCapability("appWaitActivity",tdp.getTestData("appActivity",t));
 	  
 	  driver = new AndroidDriver(new URL("http://"+tdp.getTestData("server",t)+"/wd/hub"),capabilities);
 //	  driver.removeApp("unlock_apk-debug.apk");

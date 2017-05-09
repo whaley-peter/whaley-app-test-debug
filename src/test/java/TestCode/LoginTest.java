@@ -33,13 +33,19 @@ public class LoginTest extends TestSuit{
 		
 	}
 	@Test(description = "从开机引导页登录")
-	public void loginTest(){
+	public void loginTest() throws InterruptedException{
 		String line = "t1";
 		if(au.isElementPresented(By.id(startpage.loginButton)) == true){
 //			au.click(By.id(startpage.loginButton));
 //			au.SendKeyEvent(By.id(loginpage.username), tdp1.getTestData("username",line));
 //			au.SendKeyEvent(By.id(loginpage.password), tdp1.getTestData("password", line));
 			au.click(By.id(startpage.startQQ));
+			Thread.sleep(4000);
+			
+			
+		
+			au.click(By.id("com.tencent.mobileqq:id/name)"));
+			Thread.sleep(4000);
 		}
 		
 	}

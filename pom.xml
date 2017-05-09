@@ -19,7 +19,7 @@
      <plugins>
          <plugin>
          	<groupId>org.apache.maven.plugins</groupId>
-         	<artifactId>maven-compiler-plugin</artifactId>
+         	<artifactId>maven-compile-plugin</artifactId>
          	<version>3.1</version>
          </plugin>
          <plugin>
@@ -36,27 +36,26 @@
   </build>
   
   <dependencies>
-  
-    <dependency>
-    	<groupId>selenium</groupId>
-    	<artifactId>selenium-standalone</artifactId>
-    	<version>3.2.0</version>
-    </dependency>
-    <dependency>
-    	<groupId>net.sf.opencsv</groupId>
-    	<artifactId>opencsv</artifactId>
-    	<version>3.9</version>
-    </dependency>
-    <dependency>
-    	<groupId>io.appium</groupId>
-    	<artifactId>java-client</artifactId>
-    	<version>4.1.2</version>
-    </dependency>
-    <dependency>
-    	<groupId>org.testng</groupId>
-    	<artifactId>testng</artifactId>
-    	<version>6.8</version>
-    	<type>pom.lastUpdated</type>
-    </dependency>
+  	<dependency>
+  		<groupId>org.testng</groupId>
+  		<artifactId>testng</artifactId>
+  		<version>6.8</version>
+  		<type>pom.lastUpdated</type>
+  	</dependency>
+  	<dependency>
+  		<groupId>net.sf.opencsv</groupId>
+  		<artifactId>opencsv</artifactId>
+  		<version>3.9</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>selenium</groupId>
+  		<artifactId>selenium-standalone</artifactId>
+  		<version>3.2.0</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>io.appium</groupId>
+  		<artifactId>java-client</artifactId>
+  		<version>4.1.2</version>
+  	</dependency>
   </dependencies>
 </project>

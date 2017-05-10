@@ -3,9 +3,9 @@ package TestCode;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
 import util.Action;
 import util.TestDataProvider;
+import util.TestReport;
 import util.TestSuit;
 
 import org.testng.annotations.BeforeClass;
@@ -21,9 +21,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
+@Listeners(TestReport.class)
 public class LoginTest extends TestSuit{
-	//AppiumDriver driver;
-	AndroidDriver driver;
+	AppiumDriver driver;
 	public TestDataProvider tdp;
 	public TestDataProvider tdp1;
 	@BeforeClass
@@ -32,26 +32,24 @@ public class LoginTest extends TestSuit{
 		tdp1 = new TestDataProvider(System.getProperty("user.dir")+"\\src\\test\\resources\\userInfo.csv");
 		
 	}
-	/*
 	@Test(description = "从开机引导页登录")
 	public void loginTest() throws InterruptedException{
 		String line = "t1";
 		if(au.isElementPresented(By.id(startpage.loginButton)) == true){
+//			au.click(By.id(startpage.loginButton));
+//			au.SendKeyEvent(By.id(loginpage.username), tdp1.getTestData("username",line));
+//			au.SendKeyEvent(By.id(loginpage.password), tdp1.getTestData("password", line));
 			au.click(By.id(startpage.startQQ));
 			Thread.sleep(4000);
 			
-			System.out.println(driver.currentActivity());
-//			driver.startActivity("com.tencent.mobileqq", "com.tencent.mobileqq.activity.SplashActivity");
 			
+		
 			au.click(By.id("com.tencent.mobileqq:id/name)"));
 			Thread.sleep(4000);
-			
-			
 		}
 		
 	}
-	*/
-	
+	/*
 	@Test(description = "从我的界面登录账号")
 	public void loginTest1() throws InterruptedException{
 		//设置从userInfo中的第几行获取数据
@@ -96,10 +94,12 @@ public class LoginTest extends TestSuit{
 		
 		System.out.println("登录成功");
 	}
+	*/
 	
-
+	
 	@AfterClass
 	public void afterClass() {
+//		driver.quit();
 		au.driverQuit();
 	}
 

@@ -7,15 +7,16 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
+import io.appium.java_client.android.AndroidDriver;
 
 
 public class Action {
 	
-	AppiumDriver driver;
+	AndroidDriver driver;
 	public Action ac;
 	public TouchAction au;
 	
-	public Action(AppiumDriver driver) {
+	public Action(AndroidDriver driver) {
 		this.driver = driver;
 //		ac = new Action(driver);
 		au = new TouchAction(driver);

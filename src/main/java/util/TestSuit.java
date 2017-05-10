@@ -1,10 +1,9 @@
 package util;
 
-import org.testng.annotations.Test;
-
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
 import mine.LoginPage;
 import mine.SettingPage;
 import page.HomePage;
@@ -27,7 +26,7 @@ import org.testng.annotations.BeforeSuite;
 
 public class TestSuit {
   
-	static AppiumDriver driver;
+	public AndroidDriver<AndroidElement> driver;
 	public HomePage homepage;
 	public Action au;
 	public DesiredCapabilities capabilities;
@@ -39,17 +38,13 @@ public class TestSuit {
 	
   @BeforeSuite
   public void beforeSuite() throws MalformedURLException, InterruptedException {
-	  
 	  TestDataProvider tdp = new TestDataProvider(System.getProperty("user.dir")+"/src/main/resources/globalsetting.csv");
 //	  File classpathRoot = new File(System.getProperty("user.dir"));
 //	  File appDir = new File(classpathRoot, "apps");
 //	  File app = new File(appDir, "app-debug_v2.7_03090816.apk");
-      
-
-
 	  
 	  capabilities = new DesiredCapabilities();
-	  String t = "t3";
+	  String t = "t4";
 
 	  capabilities.setCapability("platformName", tdp.getTestData("platformName", t));
 	  capabilities.setCapability("deviceName", tdp.getTestData("deviceName", t));
@@ -62,8 +57,6 @@ public class TestSuit {
 	  capabilities.setCapability("appActivity", tdp.getTestData("appActivity", t));
 	  
 	  driver = new AndroidDriver(new URL("http://"+tdp.getTestData("server",t)+"/wd/hub"),capabilities);
-//	  driver.removeApp("unlock_apk-debug.apk");
-//	  driver.removeApp("settings_apk-debug.apk");
 	  driver.manage().timeouts().implicitlyWait(1000, TimeUnit.MILLISECONDS);
 	 
 	  au = new Action(driver);

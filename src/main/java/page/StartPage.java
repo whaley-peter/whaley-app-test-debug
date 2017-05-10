@@ -2,6 +2,7 @@ package page;
 
 import io.appium.java_client.AppiumDriver;
 
+//开机引导页
 public class StartPage extends PageBase{
 	AppiumDriver driver;
 	/*

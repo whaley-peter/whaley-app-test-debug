@@ -36,12 +36,7 @@
   </build>
   
   <dependencies>
-  	<dependency>
-  		<groupId>org.testng</groupId>
-  		<artifactId>testng</artifactId>
-  		<version>6.8</version>
-  		<type>pom.lastUpdated</type>
-  	</dependency>
+
   	<dependency>
   		<groupId>net.sf.opencsv</groupId>
   		<artifactId>opencsv</artifactId>
@@ -51,6 +46,11 @@
   		<groupId>selenium</groupId>
   		<artifactId>selenium-standalone</artifactId>
   		<version>3.2.0</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.testng</groupId>
+  		<artifactId>testng</artifactId>
+  		<version>6.8</version>
   	</dependency>
   	<dependency>
   		<groupId>io.appium</groupId>

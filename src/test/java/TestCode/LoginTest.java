@@ -23,7 +23,7 @@ import org.testng.annotations.AfterClass;
 
 @Listeners(TestReport.class)
 public class LoginTest extends TestSuit{
-	AppiumDriver driver;
+	//AndroidDriver driver;
 	public TestDataProvider tdp;
 	public TestDataProvider tdp1;
 	@BeforeClass
@@ -32,6 +32,7 @@ public class LoginTest extends TestSuit{
 		tdp1 = new TestDataProvider(System.getProperty("user.dir")+"\\src\\test\\resources\\userInfo.csv");
 		
 	}
+	/*
 	@Test(description = "从开机引导页登录")
 	public void loginTest() throws InterruptedException{
 		String line = "t1";
@@ -41,15 +42,12 @@ public class LoginTest extends TestSuit{
 //			au.SendKeyEvent(By.id(loginpage.password), tdp1.getTestData("password", line));
 			au.click(By.id(startpage.startQQ));
 			Thread.sleep(4000);
-			
-			
-		
 			au.click(By.id("com.tencent.mobileqq:id/name)"));
 			Thread.sleep(4000);
 		}
-		
 	}
-	/*
+	*/
+	
 	@Test(description = "从我的界面登录账号")
 	public void loginTest1() throws InterruptedException{
 		//设置从userInfo中的第几行获取数据
@@ -78,7 +76,6 @@ public class LoginTest extends TestSuit{
 			//点击确认
 //			String a = driver.findElement(By.xpath(loginpage.comfirm1)).getText().toString();
 //			Assert.assertEquals(a, "确认");
-			
 			au.click(By.id(minepage.comfirm));
 //			au.click(By.xpath(loginpage.comfirm1));
 		}
@@ -94,12 +91,10 @@ public class LoginTest extends TestSuit{
 		
 		System.out.println("登录成功");
 	}
-	*/
 	
 	
 	@AfterClass
 	public void afterClass() {
-//		driver.quit();
 		au.driverQuit();
 	}
 
